@@ -1,10 +1,15 @@
 #!/usr/bin/groovy
 package vars
 
-import src.buildProject
+import src
 
-def execute()
+class Facade
 {
-    new buildProject().testCall()
+    def execute()
+    {
+        new BuildProject().testCall()
+    }
 }
+
+
 
