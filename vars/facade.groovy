@@ -1,11 +1,12 @@
 #!/usr/bin/groovy
 package vars
 
-import src.*
+import src.buildProject
 
 def execute()
 {
-    new buildProject().testCall();
+    p = new buildProject();
+    p.testCall()
 }
 
 
