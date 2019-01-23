@@ -5,7 +5,7 @@ class facade
 {
     def execute()
     {
-        node(master) {
+        node{
             stage('Build a Maven project') {
                 git 'https://github.com/jenkinsci/kubernetes-plugin.git'                    
             }
