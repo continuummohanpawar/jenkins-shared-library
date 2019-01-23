@@ -7,7 +7,7 @@ class Facade
 {
     def execute()
     {
-        new BuildProject().testCall()
+        new buildProject().testCall()
     }
 }
 

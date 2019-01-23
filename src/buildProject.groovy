@@ -2,7 +2,7 @@
 
 package src
 
-class BuildProject {
+class buildProject {
     def call(String projectType)
     {       
         switch(projectType) {
