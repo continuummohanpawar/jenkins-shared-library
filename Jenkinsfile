@@ -1,4 +1,5 @@
 
+#!/usr/bin/groovy
 @Library('shared_lib') _
 import vars.*
 
