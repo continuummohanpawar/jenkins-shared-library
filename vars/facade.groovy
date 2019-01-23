@@ -5,7 +5,7 @@ import src.*
 
 def execute()
 {
-    new buildProject().testCal();
+    new buildProject().testCall();
 }
 
 
