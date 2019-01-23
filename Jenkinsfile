@@ -1,5 +1,5 @@
 
 @Library('shared_lib') _
-import jenkins.src.*
+import jenkins.vars.*
 
-new buildProject().testCall()
+new facade().execute()
