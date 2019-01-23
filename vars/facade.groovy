@@ -1,8 +1,7 @@
 #!/usr/bin/groovy
+package vars
 
 import src.buildProject
-
-package vars
 
 def execute()
 {
