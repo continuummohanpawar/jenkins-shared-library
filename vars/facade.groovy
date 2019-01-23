@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
-package vars
+//package vars
 
 //import vars.buildProject
 

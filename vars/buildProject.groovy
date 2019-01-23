@@ -1,6 +1,6 @@
 #!/bin/groovy
 
-package vars
+//package vars
 
 def call(String projectType)
 {       
