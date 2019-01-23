@@ -3,7 +3,7 @@ package vars
 
 import src.buildProject
 
-class Facade
+class facade
 {
     def execute()
     {
