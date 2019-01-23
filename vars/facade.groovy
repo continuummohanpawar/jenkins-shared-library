@@ -1,13 +1,11 @@
 #!/usr/bin/groovy
 package vars
 
+import src.*
+
 def execute()
 {
-    node{
-        stage('Build a Maven project') {
-            git 'https://github.com/jenkinsci/kubernetes-plugin.git'                    
-        }
-    }
+    new buildProject().testCal();
 }
 
 
