@@ -3,11 +3,6 @@ package vars
 
 class facade
 {
-    def execute1()
-    {
-        new buildProject().testCall()
-    }
-
     def execute()
     {
         pipeline {
