@@ -1,6 +1,6 @@
 
 @Library("shared_lib")
-import vars.*
+import vars
 
 f = new facade()
 f.execute()
