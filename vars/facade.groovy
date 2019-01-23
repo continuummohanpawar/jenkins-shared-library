@@ -1,7 +1,7 @@
 #!/usr/bin/groovy
 package vars
 
-import src.*
+import src.buildProject
 
 class Facade
 {
