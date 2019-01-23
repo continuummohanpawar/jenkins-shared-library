@@ -1,3 +1,4 @@
+#!/usr/bin/groovy
 package vars
 
 import src
