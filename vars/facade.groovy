@@ -5,49 +5,36 @@ class facade
 {
     def execute()
     {
-        pipeline {
-            agent {
-                kubernetes {
-                label 'mypod'
-                yaml """
+        def label = "maven-${UUID.randomUUID().toString()}"
+        podTemplate(label: label, yaml: """
 apiVersion: v1
 kind: Pod
+metadata:
+  labels:
+    some-label: some-label-value
 spec:
-containers:
-- name: maven
+  containers:
+  - name: maven
     image: maven:3.3.9-jdk-8-alpine
-    command: ['cat']
+    command:
+    - cat
     tty: true
+    env:
+    - name: CONTAINER_ENV_VAR
+      value: container-env-var-value
 """
-                }
-            }
-            stages {
-                stage('Run maven - 01') {
-                    steps {
-                        container('maven') {
-                        sh 'mvn -version'
-                        }
+    ) {
+
+            node(label) {
+                stage('Build a Maven project') {
+                    git 'https://github.com/jenkinsci/kubernetes-plugin.git'
+                    container('maven') {
+                        sh 'mvn -B clean package'
                     }
                 }
-                
-                stage('Run maven - 02') {
-                    steps {
-                        container('maven') {
-                        sh 'mvn -version'
-                        }
-                    }
-                }
-                
-                stage('Run maven - 03') {
-                    steps {
-                        container('maven') {
-                        sh 'mvn -version'
-                        }
-                    }
-                }    
             }
         }
-    }    
+    }
 }
 
 
