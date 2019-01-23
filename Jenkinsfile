@@ -1,6 +1,6 @@
 
-#!/usr/bin/groovy
-@Library('shared_lib') _
+@Library("shared_lib")
 import vars.*
 
-new facade().execute()
+f = new facade()
+f.execute()
