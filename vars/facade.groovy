@@ -1,6 +1,6 @@
-package jenkins.vars
+package vars
 
-import jenkins.src
+import src
 
 def execute()
 {

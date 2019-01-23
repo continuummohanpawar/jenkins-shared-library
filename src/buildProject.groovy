@@ -1,6 +1,6 @@
 #!/bin/groovy
 
-package jenkins.src
+package src
 
 def call(String projectType)
 {       

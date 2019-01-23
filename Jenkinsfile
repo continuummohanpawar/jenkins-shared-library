@@ -1,5 +1,5 @@
 
 @Library('shared_lib') _
-import jenkins.vars.*
+import vars.*
 
 new facade().execute()
