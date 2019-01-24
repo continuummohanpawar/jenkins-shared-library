@@ -6,6 +6,7 @@
 def execute()
 {
     p = new buildProject();
+    println("Hi I am inside a facade")
     p.testCall()
 }
 

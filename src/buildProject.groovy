@@ -17,7 +17,7 @@ def call(String projectType)
 def testCall()
 {       
     node{
-        stage('Build a Maven project') {
+        stage('Build a Maven project from src') {
         git 'https://github.com/jenkinsci/kubernetes-plugin.git'                    
         }
     }
