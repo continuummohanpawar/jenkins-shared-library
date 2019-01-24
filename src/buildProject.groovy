@@ -1,7 +1,3 @@
-#!/bin/groovy
-
-//package vars
-
 def call(String projectType)
 {       
     switch(projectType) {
@@ -21,5 +17,4 @@ def testCall()
         git 'https://github.com/jenkinsci/kubernetes-plugin.git'                    
         }
     }
-}    
-
+}
