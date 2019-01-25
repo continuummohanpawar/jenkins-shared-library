@@ -1,12 +1,11 @@
 #!/usr/bin/groovy
 
 def call(body) {
-    // evaluate the body block, and collect configuration into the object
-    println(body)
+    // evaluate the body block, and collect configuration into the object    
     def config = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
-    body()    
+    body()   
     //kubernetes.pod('buildpod')
     //.withNewContainer()
     //    .withName('maven-container')
