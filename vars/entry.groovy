@@ -2,7 +2,7 @@
 
 def call(body) {
     // evaluate the body block, and collect configuration into the object
-    println(config)
+    println(body)
     def config = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
