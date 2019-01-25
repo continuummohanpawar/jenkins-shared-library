@@ -15,6 +15,7 @@ def call(body) {
         }        
     */
     /*  */
+    stage 'build stage'
     kubernetes.pod('buildpod')
         //.withServiceAccount(<service account>)
         //.withSecret(<mount path>, <secret name>)
