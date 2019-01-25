@@ -15,13 +15,15 @@ def call(body) {
         }        
     */
     /*  */
-    kubernetes.pod('buildpod')
-        //.withServiceAccount(<service account>)
-        //.withSecret(<mount path>, <secret name>)
-        //.withEnvar(<gloabal key1>, <value1>)
-        .withNewContainer().withName('maven').withImage('maven')
-                        .and()
-        .withNewContainer().withName('maven').withImage('maven').inside {
-            sh 'I am inside a container'
+    node{
+        kubernetes.pod('buildpod')
+            //.withServiceAccount(<service account>)
+            //.withSecret(<mount path>, <secret name>)
+            //.withEnvar(<gloabal key1>, <value1>)
+            .withNewContainer().withName('maven').withImage('maven')
+                            .and()
+            .withNewContainer().withName('maven').withImage('maven').inside {
+                sh 'I am inside a container'
+        }
     }
 }
