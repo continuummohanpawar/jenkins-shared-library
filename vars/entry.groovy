@@ -17,7 +17,7 @@ def call(body) {
         //sh "echo 'Image: ${config.message}'"
         kubernetes.pod('buildpod')
         .withNewContainer()
-            .withName('maven-container')
+            .withName('mavencontainer')
             .withImage('maven')
         .withPrivileged(true)            
         .inside { 
