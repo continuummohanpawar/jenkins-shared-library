@@ -15,6 +15,15 @@ def call(body) {
     node{   
         sh "echo 'Image: ${config.image}'"
         sh "echo 'Image: ${config.message}'"
+        kubernetes.pod('buildpod')
+        .withNewContainer()
+            .withName('maven-container')
+            .withImage('maven')
+        .withPrivileged(true)            
+        .inside { 
+            sh "echo 'Image: ${config.image}'"
+            sh "echo 'Image: ${config.message}'"
+        }        
     }
     //}
 }
