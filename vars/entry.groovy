@@ -12,8 +12,10 @@ def call(Map config) {
     //    .withName('maven-container')
     //    .withImage('maven')
     //.withPrivileged(true)            
-    //.inside {     
+    //.inside {  
+    node{   
         sh "echo 'Image: ${config.image}'"
         sh "echo 'Image: ${config.message}'"
+    }
     //}
 }
