@@ -17,12 +17,10 @@ def call(body) {
     /*  */
     stage 'build stage'
     kubernetes.pod('buildpod')
-        //.withServiceAccount(<service account>)
-        //.withSecret(<mount path>, <secret name>)
-        //.withEnvar(<gloabal key1>, <value1>)
-        .withNewContainer().withName('mymaven1').withImage('maven')
-                        .and()
+        .withNewContainer().withName('mymaven1').withImage('maven').inside {
+            sh 'I am inside a container'
+        }.and()
         .withNewContainer().withName('mymaven2').withImage('maven').inside {
             sh 'I am inside a container'
-    }
+        }
 }
