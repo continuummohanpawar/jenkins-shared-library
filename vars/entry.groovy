@@ -18,6 +18,7 @@ def call(body) {
         kubernetes.pod('buildpod')
             .withNewContainer().withName('maven').withImage('maven:3.3.9-jdk-8-alpine').withCommand('cat').withTtyEnabled()
             .withPrivileged(true)
+            .withLabel('name','maven')
             .inside { 
                 sh "echo 'Image: ${config.image}'"
                 sh "echo 'Image: ${config.message}'"
