@@ -16,9 +16,8 @@ def call(body) {
         //sh "echo 'Image: ${config.image}'"
         //sh "echo 'Image: ${config.message}'"
         kubernetes.pod('buildpod').withImage('maven')
-            //.withNewContainer().withName('maven').withImage('maven:3.3.9-jdk-8-alpine').withCommand('cat').withTtyEnabled()
-            .withPrivileged(true)
-            .inside { 
+            //.withNewContainer().withName('maven').withImage('maven:3.3.9-jdk-8-alpine').withCommand('cat').withTtyEnabled()            
+            .inside {
                 sh "echo 'Image: ${config.image}'"
                 sh "echo 'Image: ${config.message}'"
             }        
