@@ -7,16 +7,18 @@ def call(Map config) {
     //body.resolveStrategy = Closure.DELEGATE_FIRST
     //body.delegate = config
     //body()
-
-    kubernetes.pod('buildpod')
-    .withNewContainer()
-        .withName('maven-container')
-        .withImage('maven')
-    .withPrivileged(true)            
-    .inside {     
-        sh "echo 'Image: ${config.image}'"
-        sh "echo 'Image: ${config.message}'"
+    node{
+        kubernetes.pod('buildpod')
+        .withNewContainer()
+            .withName('maven-container')
+            .withImage('maven')
+        .withPrivileged(true)            
+        .inside {     
+            sh "echo 'Image: ${config.image}'"
+            sh "echo 'Image: ${config.message}'"
+        }
     }
+    
 }
 
 return this
