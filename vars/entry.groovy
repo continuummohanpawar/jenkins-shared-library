@@ -12,9 +12,9 @@ def call(body) {
     //    .withImage('maven')
     //.withPrivileged(true)            
     //.inside {  
-    node{   
-        sh "echo 'Image: ${config.image}'"
-        sh "echo 'Image: ${config.message}'"
+    //node{   
+        //sh "echo 'Image: ${config.image}'"
+        //sh "echo 'Image: ${config.message}'"
         kubernetes.pod('buildpod')
         .withNewContainer()
             .withName('maven-container')
@@ -24,6 +24,6 @@ def call(body) {
             sh "echo 'Image: ${config.image}'"
             sh "echo 'Image: ${config.message}'"
         }        
-    }
+    //}
     //}
 }
