@@ -5,6 +5,6 @@
 //f.execute()
 
 entry{
-    image: 'maven'
-    message: 'This is Visharad'
+    image = 'maven'
+    message = 'This is Visharad'
 } 
