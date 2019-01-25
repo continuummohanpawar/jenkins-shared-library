@@ -15,5 +15,5 @@ def call(Map config) {
     //.inside {     
         sh "echo 'Image: ${config.image}'"
         sh "echo 'Image: ${config.message}'"
-    }
+    //}
 }
