@@ -17,10 +17,10 @@ def call(body) {
     /*  */
     stage 'build stage'
     kubernetes.pod('buildpod')
-        .withNewContainer().withName('mymaven1').withImage('maven').inside {
+        .withNewContainer().withName('mymaven1').withImage('maven').inside{
             sh 'I am inside a container'
         }.and()
-        .withNewContainer().withName('mymaven2').withImage('maven').inside {
+        .withNewContainer().withName('mymaven2').withImage('maven').inside{
             sh 'I am inside a container'
         }
 }
