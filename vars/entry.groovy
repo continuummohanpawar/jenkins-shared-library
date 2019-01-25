@@ -16,16 +16,12 @@ def call(body) {
         //sh "echo 'Image: ${config.image}'"
         //sh "echo 'Image: ${config.message}'"
         kubernetes.pod('buildpod')
-        .withNewContainer()
-            .withName('maven')
-            .withImage('maven:3.3.9-jdk-8-alpine')
-            .withCommand('cat')
-            .withTtyEnabled()
-        .withPrivileged(true)
-        .inside { 
-            sh "echo 'Image: ${config.image}'"
-            sh "echo 'Image: ${config.message}'"
-        }        
+            .withNewContainer().withName('maven').withImage('maven:3.3.9-jdk-8-alpine').withCommand('cat').withTtyEnabled()
+            .withPrivileged(true)
+            .inside { 
+                sh "echo 'Image: ${config.image}'"
+                sh "echo 'Image: ${config.message}'"
+            }        
     //}
     //}
 }
