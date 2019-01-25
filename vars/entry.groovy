@@ -15,6 +15,5 @@ def call(body) {
     .inside {     
         sh "echo 'Image: ${config.image}'"
         sh "echo 'Image: ${config.message}'"
-      }
     }
-  }
+}
