@@ -16,7 +16,7 @@ def call(body) {
     */
     /*  */
     kubernetes.pod('buildpod')
-        .withNewContainer().withName('maven').withImage('maven').inside {
+        .withNewContainer().withImage('maven').inside {
             sh 'Hi, I am inside a container'
         }
 }
