@@ -2,7 +2,7 @@
 
 def call(Map config) {
     // evaluate the body block, and collect configuration into the object
-    println(body)
+    println(config)
     //def config = [:]
     //body.resolveStrategy = Closure.DELEGATE_FIRST
     //body.delegate = config
