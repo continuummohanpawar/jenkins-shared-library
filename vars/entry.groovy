@@ -1,12 +1,12 @@
 #!/usr/bin/groovy
 
-def call(Map config) {
+def call(body) {
     // evaluate the body block, and collect configuration into the object
     println(config)
-    //def config = [:]
-    //body.resolveStrategy = Closure.DELEGATE_FIRST
-    //body.delegate = config
-    //body()    
+    def config = [:]
+    body.resolveStrategy = Closure.DELEGATE_FIRST
+    body.delegate = config
+    body()    
     //kubernetes.pod('buildpod')
     //.withNewContainer()
     //    .withName('maven-container')
