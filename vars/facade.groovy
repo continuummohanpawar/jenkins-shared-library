@@ -12,8 +12,8 @@ def readJsonConfig()
     def slurper = new JsonSlurper()
 }
 
-def readYamlConfig()
+def readYamlConfig(string config)
 {
-    def config = readYaml file: 'pipelineConfig.yaml'    
+    def config = readYaml text: config
 }
 

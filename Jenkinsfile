@@ -5,7 +5,15 @@
 
 def f = new facade()
 f.readJsonConfig()
-def conf = f.readYamlConfig()
+
+def config = """
+
+name: "Visharad"
+lname: "Dhavle"
+
+"""
+
+def conf = f.readYamlConfig(config)
 f.execute()
 
 /*entry{
