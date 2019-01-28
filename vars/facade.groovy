@@ -2,7 +2,7 @@ import groovy.json.JsonSlurper
 
 def execute()
 {
-    p = new buildProject();
+    p = new buildProject()
     p.testCall()
 }
 
@@ -13,7 +13,7 @@ def readJsonConfig()
 
 def readYamlConfig(String config)
 {   
-    l = new Logger()
+    l = new logger()
     l.log("Reading YAML file")
     def _config = readYaml text: config
     println(_config.name)
