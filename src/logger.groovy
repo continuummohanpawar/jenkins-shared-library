@@ -1,4 +1,4 @@
-static void log(String message, String level = "INFO") 
+void log(String message, String level = "INFO") 
 {        
     switch(level)
     {
