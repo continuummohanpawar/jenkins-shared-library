@@ -1,10 +1,9 @@
 
 @Library("shared_lib") _
 
-//f = new facade()
-//f.execute()
+execute()
 
-entry{
+/*entry{
     image = 'maven'
     message = 'This is Visharad'
-} 
+}*/
