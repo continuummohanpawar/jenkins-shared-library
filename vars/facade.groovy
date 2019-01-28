@@ -13,10 +13,10 @@ def readJsonConfig()
 
 def readYamlConfig(String config)
 {   
-    
-    Logger.log("Reading YAML file")
+    def l = new Logger()
+    l.log("Reading YAML file")
     def _config = readYaml text: config
     println(_config.name)
-    Logger.log("ERROR", "Reading YAML file - done")
+    l.log("ERROR", "Reading YAML file - done")
 }
 
