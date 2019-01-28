@@ -5,7 +5,7 @@ def call(body) {
     def config = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
-    
+    //body()
     
     def label = "mongo-${UUID.randomUUID().toString()}"
     podTemplate(label: label, yaml: """
@@ -23,12 +23,13 @@ spec:
   - name: mongo
     image: mongo
 """
-)
+){ 
+    body() 
+    }
 
     node{
         container('maven') {
             sh 'echo Hello World'
         }
     }
-    body()
 }
