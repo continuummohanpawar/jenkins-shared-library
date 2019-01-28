@@ -1,3 +1,5 @@
+import groovy.json.JsonSlurper
+
 def execute()
 {
     p = new buildProject();
