@@ -1,5 +1,5 @@
 import groovy.json.JsonSlurper
-import org.my.jenkins.Loggy
+import org.my.jenkins
 
 def execute()
 {
@@ -14,7 +14,7 @@ def readJsonConfig()
 
 def readYamlConfig(String config)
 {   
-    l = new Logger()
+    l = new logger()
     l.log("Reading YAML file")
     def _config = readYaml text: config
     println(_config.name)
