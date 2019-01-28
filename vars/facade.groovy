@@ -19,7 +19,9 @@ def readYamlConfig(String config)
     def _config = readYaml text: config
     println(_config.name)
     l.log("Reading YAML file - done", "ERROR")
-    def lo = new Loggy()
-    lo.log("Reading YAML file LOGGY - done", "ERROR")
+    //def lo = new Loggy()
+    //lo.log("Reading YAML file LOGGY - done", "ERROR")
+
+    Loggy.log("Reading YAML file LOGGY - done", "ERROR")
 }
 
