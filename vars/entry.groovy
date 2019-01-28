@@ -23,14 +23,12 @@ spec:
   - name: mongo
     image: mongo
 """
-){ 
-    body() 
-    }
-
+)
     node(label){
         stage('Test Phase'){
             container('maven') {
                 sh 'echo Hello World'
+                body()
             }
         }
         
