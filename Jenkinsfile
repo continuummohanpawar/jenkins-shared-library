@@ -5,6 +5,7 @@
 
 def f = new facade()
 f.readConfig()
+def conf = f.readYamlConfig()
 f.execute()
 
 /*entry{

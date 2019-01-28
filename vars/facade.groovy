@@ -7,8 +7,13 @@ def execute()
 }
 
 
-def readConfig()
+def readJsonConfig()
 {
     def slurper = new JsonSlurper()
+}
+
+def readYamlConfig()
+{
+    def config = readYaml file: 'pipelineConfig.yaml'    
 }
 
