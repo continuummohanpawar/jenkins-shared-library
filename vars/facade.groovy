@@ -22,6 +22,9 @@ def readYamlConfig(String config)
     def lo = new Loggy()
     lo.log("Reading YAML file LOGGY - done", "ERROR")
 
-    
+    entry{
+        image = 'maven'
+        message = 'This is Visharad'
+    }
 }
 

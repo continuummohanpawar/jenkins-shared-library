@@ -14,7 +14,7 @@ lname: "Dhavle"
 """
 
 def conf = f.readYamlConfig(config)
-f.execute()
+//f.execute()
 
 /*entry{
     image = 'maven'
