@@ -4,7 +4,7 @@
 //def slurper = new JsonSlurper()
 
 def f = new facade()
-f.readConfig()
+f.readJsonConfig()
 def conf = f.readYamlConfig()
 f.execute()
 
