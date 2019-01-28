@@ -8,7 +8,7 @@ def call(body) {
     body()   
 
     node{
-        sh 'Hello World'
+        sh 'echo Hello World'
     }   
     
 }
