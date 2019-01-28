@@ -14,6 +14,6 @@ def readJsonConfig()
 
 def readYamlConfig(String config)
 {
-    def config = readYaml text: config
+    def _config = readYaml text: config
 }
 
