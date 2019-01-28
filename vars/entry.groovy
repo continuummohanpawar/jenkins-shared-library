@@ -27,7 +27,7 @@ spec:
     body() 
     }
 
-    node{
+    node(label){
         container('maven') {
             sh 'echo Hello World'
         }
