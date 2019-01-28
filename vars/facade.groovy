@@ -22,6 +22,6 @@ def readYamlConfig(String config)
     //def lo = new Loggy()
     //lo.log("Reading YAML file LOGGY - done", "ERROR")
 
-    org.my.jenkins.Loggy.log("Reading YAML file LOGGY - done", "ERROR")
+    Library("shared_lib").org.my.jenkins.Loggy.log("Reading YAML file LOGGY - done", "ERROR")
 }
 
