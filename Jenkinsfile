@@ -1,7 +1,8 @@
 
 @Library("shared_lib") _
 
-execute()
+def f = new facade()
+f.execute()
 
 /*entry{
     image = 'maven'
