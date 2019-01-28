@@ -12,7 +12,7 @@ def readJsonConfig()
     def slurper = new JsonSlurper()
 }
 
-def readYamlConfig(string config)
+def readYamlConfig(String config)
 {
     def config = readYaml text: config
 }
