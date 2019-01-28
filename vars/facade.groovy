@@ -1,5 +1,4 @@
 import groovy.json.JsonSlurper
-import src.Log
 
 def execute()
 {

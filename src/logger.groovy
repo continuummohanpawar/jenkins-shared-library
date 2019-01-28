@@ -1,5 +1,3 @@
-package src
-
 class Log {
 
     static void log(String message, String level = "INFO") 
