@@ -28,8 +28,11 @@ spec:
     }
 
     node(label){
-        container('maven') {
-            sh 'echo Hello World'
+        stage('Test Phase'){
+            container('maven') {
+                sh 'echo Hello World'
+            }
         }
+        
     }
 }
