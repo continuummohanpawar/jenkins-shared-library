@@ -1,5 +1,5 @@
 import groovy.json.JsonSlurper
-import org.my.jenkins.Loggy
+import org.my.jenkins.*
 
 def execute()
 {
