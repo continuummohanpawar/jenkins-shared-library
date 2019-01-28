@@ -16,9 +16,7 @@ def call(body) {
     */
     /*  */
     stage 'build stage'
-    kubernetes.pod('buildpod')
-    .withServiceAccount('default')            
-    .withNewContainer().withName('t2').withImage('nginx').inside {
+    kubernetes.pod('buildpod').withServiceAccount('default').withNewContainer().withName('t2').withImage('nginx').inside {
         sh 'some shell commands that are going to be run inside name2'
     }
 }
