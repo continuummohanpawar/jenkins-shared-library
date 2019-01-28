@@ -4,3 +4,8 @@ def execute()
     p.testCall()
 }
 
+@NonCPS
+def readConfig{
+    def slurper = new JsonSlurper()
+}
+
