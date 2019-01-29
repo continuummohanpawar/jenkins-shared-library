@@ -38,6 +38,8 @@ spec:
                     dir("${WORKSPACE}/src/github.com/ContinuumLLC"){
                         checkout scm
                     }
+
+                    sh 'sleep 300'
                 }
 
                 stage('build+test')
@@ -58,8 +60,6 @@ spec:
             }
 
             container('maven') {
-
-                tool name: 'Go 1.8', type: 'go'
 
                 sh 'env'
 
