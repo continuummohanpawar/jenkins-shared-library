@@ -66,12 +66,12 @@ spec:
 
                 stage('upload artifacts')
                 {
-                    
+                     sh 'echo configure artifactory'
                 }
 
                 stage('promote build')
                 {
-
+                     sh 'echo pormote build'
                 }
             }      
         }
