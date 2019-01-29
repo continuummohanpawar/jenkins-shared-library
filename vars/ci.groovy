@@ -31,6 +31,7 @@ spec:
                 withEnv(["GOROOT=${root}", "PATH+GO=${root}/bin"])
                 {
                     sh 'env'
+                    sleep 500
                     sh 'go version'
                 }
 
