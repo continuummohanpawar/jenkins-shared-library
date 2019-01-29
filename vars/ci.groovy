@@ -34,6 +34,7 @@ spec:
                 stage('build+test')
                 {
                     sh 'echo building application'
+                    sh 'echo testing application'
                 }
 
                 stage('sonar')
