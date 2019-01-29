@@ -25,9 +25,11 @@ spec:
         body() 
         node(label){
 
-            tool name: 'Go 1.8', type: 'go'
+            
             
             container('maven') {
+
+                tool name: 'Go 1.8', type: 'go'
 
                 stage('checkout')
                 {
@@ -52,6 +54,8 @@ spec:
             }
 
             container('maven') {
+
+                tool name: 'Go 1.8', type: 'go'
 
                 stage('docker build')
                 {
