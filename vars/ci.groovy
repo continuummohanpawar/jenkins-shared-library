@@ -64,7 +64,7 @@ spec:
 
             stage('parralel')
             {
-                parallel 
+                parallel a:
                 {
                     container('maven') 
                     {
@@ -73,9 +73,7 @@ spec:
                             sh 'echo configure artifactory'
                         }
                     }
-                }
-
-                parallel 
+                },b:                 
                 {
                     container('maven') 
                     {
