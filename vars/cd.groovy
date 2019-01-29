@@ -24,22 +24,26 @@ spec:
 )   {
         body() 
         node(label){
-            switch(config.env) {
-                case 'int':
-                    sh 'echo deploying it on int'
-                break
-                case 'qa':
-                    sh 'echo deploying it on qa'
-                break
-                case 'stage':
-                    sh 'echo deploying it on stage'
-                break
-                case 'prod':
-                    sh 'echo deploying it on prod'
-                break
-                default:
-                    sh 'echo unable to find ${config.env}'
-                break
+            stage('deploy-${config.env}')
+            {
+                switch(config.env) 
+                {
+                    case 'int':
+                        sh 'echo deploying it on int'
+                    break
+                    case 'qa':
+                        sh 'echo deploying it on qa'
+                    break
+                    case 'stage':
+                        sh 'echo deploying it on stage'
+                    break
+                    case 'prod':
+                        sh 'echo deploying it on prod'
+                    break
+                    default:
+                        sh 'echo unable to find ${config.env}'
+                    break
+                }
             }
         }       
     }

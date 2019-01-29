@@ -93,22 +93,21 @@ spec:
         }
 
         input 'Do you approve qa deployment?'
-        cd env: 'qa'
+        cd
+        {
+            env = 'qa'
+        }
 
         input 'Do you approve stage deployment?'
-        node(label){
-            container('maven') {
-                stage('deploy-stage')
-                sh 'echo Execution after approval'
-            }
+        cd
+        {
+            env = 'stage'
         }
 
         input 'Do you approve prod deployment?'
-        node(label){
-            container('maven') {
-                stage('deploy-prod')
-                sh 'echo Execution after approval'
-            }
+        cd
+        {
+            env = 'prod'
         }
     }
 }
