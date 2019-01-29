@@ -28,7 +28,7 @@ spec:
 
                 stage('checkout')
                 {
-                    git scm
+                    checkout scm
                 }
 
                 stage('build+test')
