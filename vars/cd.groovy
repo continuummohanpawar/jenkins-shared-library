@@ -24,7 +24,8 @@ spec:
 )   {
         body() 
         node(label){
-            stage('deploy-${config.env}')
+            def stageName = 'deploy-${config.env}'
+            stage(stageName)
             {
                 switch(config.env) 
                 {
