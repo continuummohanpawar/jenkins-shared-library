@@ -25,7 +25,7 @@ spec:
 ){ 
     body() 
     node(label){
-        Utilities.mvn this, "I am a static method"
+        mvn this, "I am a static method"
         checkout scm
         def data = readYaml(file: "${WORKSPACE}/pipelineConfig.yaml")
         println(data.name)
