@@ -13,9 +13,7 @@ def readJsonConfig()
 }
 
 def readYamlConfig(String config)
-{   
-    def data = readYaml(file: "${WORKSPACE}/pipelineConfig.yaml")
-    println(data.name)
+{       
     l = new logger()
     l.log("Reading YAML file")
     def _config = readYaml text: config
