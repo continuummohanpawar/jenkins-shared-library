@@ -21,6 +21,11 @@ lname: "Dhavle"
 //    message = 'This is Visharad'
 //}
 
+/* This is working CI
 ci{
-    name: 'visharad'
+    name = 'visharad'
+}*/
+
+cd{
+    env = 'int'
 }
