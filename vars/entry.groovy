@@ -1,5 +1,4 @@
 #!/usr/bin/groovy
-import org.my.jenkins.Utilities.*
 
 def call(body) {
     // evaluate the body block, and collect configuration into the object    
@@ -25,8 +24,6 @@ spec:
 ){ 
     body() 
     node(label){
-        def util = new Utilities();
-        util.mvn this, "I am a static method"
         checkout scm
         def data = readYaml(file: "${WORKSPACE}/pipelineConfig.yaml")
         println(data.name)
