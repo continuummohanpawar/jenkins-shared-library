@@ -29,6 +29,7 @@ spec:
         stage('Test Phase'){
             container('maven') {
                 sh 'echo Hello World'
+                sh 'ls ${WORKSPACE}'
             }
         }        
     }
