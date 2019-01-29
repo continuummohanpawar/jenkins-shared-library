@@ -17,7 +17,7 @@ metadata:
 spec:
   containers:
   - name: maven
-    image: maven:3.3.9-jdk-8-alpine
+    image: instrumentisto/glide
     command: ['cat']
     tty: true
 """
