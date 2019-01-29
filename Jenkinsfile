@@ -13,10 +13,14 @@ lname: "Dhavle"
 
 """
 
-def conf = f.readYamlConfig(config)
+//def conf = f.readYamlConfig(config)
 //f.execute()
 
 //entry{
 //    image = 'maven'
 //    message = 'This is Visharad'
 //}
+
+ci{
+    name: 'visharad'
+}
