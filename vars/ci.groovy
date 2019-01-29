@@ -24,15 +24,9 @@ spec:
 )   {
         body()
         
-        tools{
-                go 'go'
-        }
-
         node(label){            
-            
-            container('maven') {
-
-                
+            def root = tool name: 'Go', type: 'go'
+            container('maven') {                
 
                 //withEnv(["GOROOT=${root}", "PATH+GO=${root}/bin"])
                 //{
