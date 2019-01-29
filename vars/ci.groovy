@@ -22,12 +22,13 @@ spec:
     tty: true
 """
 )   {
-        body() 
-        node(label){
-
-            tools{
+        body()
+        
+        tools{
                 go 'go'
-            }
+        }
+
+        node(label){            
             
             container('maven') {
 
