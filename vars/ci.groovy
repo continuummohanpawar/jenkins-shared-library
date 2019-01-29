@@ -31,6 +31,8 @@ spec:
 
                 tool name: 'Go 1.8', type: 'go'
 
+                sh 'env'
+
                 stage('checkout')
                 {
                     checkout scm
@@ -56,6 +58,8 @@ spec:
             container('maven') {
 
                 tool name: 'Go 1.8', type: 'go'
+
+                sh 'env'
 
                 stage('docker build')
                 {
