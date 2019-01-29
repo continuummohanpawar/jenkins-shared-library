@@ -20,14 +20,12 @@ spec:
     image: maven:3.3.9-jdk-8-alpine
     command: ['cat']
     tty: true
-  - name: mongo
-    image: mongo
 """
 ){ 
     body() 
     node(label){
         //def data = readYaml(file: "${WORKSPACE}/pipelineConfig.yaml")
-        println(data.name)
+        //println(data.name)
         stage('Test Phase'){
             container('maven') {
                 sh 'echo Hello World'
