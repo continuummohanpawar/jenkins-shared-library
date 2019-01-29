@@ -62,7 +62,7 @@ spec:
 
             }
 
-            stage('parralel')
+            stage('parallel tasks')
             {
                 parallel a:
                 {
