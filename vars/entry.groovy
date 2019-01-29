@@ -24,6 +24,7 @@ spec:
 ){ 
     body() 
     node(label){
+        checkout scm
         //def data = readYaml(file: "${WORKSPACE}/pipelineConfig.yaml")
         //println(data.name)
         stage('Test Phase'){
