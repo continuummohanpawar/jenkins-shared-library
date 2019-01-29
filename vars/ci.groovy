@@ -26,17 +26,16 @@ spec:
         
         node(label){            
             def root = tool name: 'Go', type: 'go'
-            container('maven') {                
+            container('maven') {             
 
                 withEnv(["GOROOT=${root}", "PATH+GO=${root}/bin"])
                 {
-                    sh 'env'
-                    //sleep 500
                     sh 'go version'
                 }
 
                 stage('checkout')
                 {
+                    preSetup.goSetup()
                     checkout scm
                 }
 
