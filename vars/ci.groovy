@@ -25,11 +25,11 @@ spec:
         body() 
         node(label){
 
-            
+            tool name: 'Go 1.8', type: 'go'
             
             container('maven') {
 
-                tool name: 'Go 1.8', type: 'go'
+                
 
                 withEnv(["PATH=${PATH}:${WORKSPACE}/bin:/usr/local/go/bin", "GOPATH=${WORKSPACE}"])
                     {
