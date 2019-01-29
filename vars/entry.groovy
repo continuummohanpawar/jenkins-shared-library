@@ -27,13 +27,14 @@ spec:
         checkout scm
         def data = readYaml(file: "${WORKSPACE}/pipelineConfig.yaml")
         println(data.name)
-        stage('Test Phase'){
+        //stage('Test Phase'){
             container('maven') {
+                stage 'Test Phase'
                 sh 'echo Hello World'
                 sh 'ls ${WORKSPACE}'
                 //sh 'sleep 300'
             }
-        }        
+        //}        
     }
     }
 }
