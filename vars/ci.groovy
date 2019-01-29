@@ -28,10 +28,11 @@ spec:
             def root = tool name: 'Go', type: 'go'
             container('maven') {                
 
-                //withEnv(["GOROOT=${root}", "PATH+GO=${root}/bin"])
-                //{
+                withEnv(["GOROOT=${root}", "PATH+GO=${root}/bin"])
+                {
+                    sh 'env'
                     sh 'go version'
-                //}
+                }
 
                 stage('checkout')
                 {
