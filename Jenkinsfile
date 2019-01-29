@@ -12,8 +12,7 @@ name: "Visharad"
 lname: "Dhavle"
 
 """
-def data = readYaml(file: "${WORKSPACE}/pipelineConfig.yaml")
-println(data.name)
+
 def conf = f.readYamlConfig(config)
 //f.execute()
 
