@@ -63,17 +63,22 @@ spec:
             }
 
             container('maven') {
-                parallel{
-                    stage('upload artifacts')
-                    {
-                        sh 'echo configure artifactory'
+                parallel
+                (
+                    a:{
+                        stage('upload artifacts')
+                        {
+                            sh 'echo configure artifactory'
+                        }
                     }
-
-                    stage('promote build')
-                    {
-                        sh 'echo pormote build'
+                    
+                    b:{
+                        stage('promote build')
+                        {
+                            sh 'echo pormote build'
+                        }
                     }
-                }
+                )
             }      
         }
     }
