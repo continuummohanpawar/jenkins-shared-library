@@ -35,8 +35,9 @@ spec:
 
                 stage('checkout')
                 {
-                    preSetup.goSetup()
-                    checkout scm
+                    dir("${WORKSPACE}/src/github.com/ContinuumLLC"){
+                        checkout scm
+                    }
                 }
 
                 stage('build+test')
