@@ -25,17 +25,16 @@ spec:
         body() 
         node(label){
 
-            tool name: 'Go 1.8', type: 'go'
+            def root = tool name: 'Go 1.8', type: 'go'
             
             container('maven') {
 
                 
 
-                withEnv(["PATH=${PATH}:${WORKSPACE}/bin:/usr/local/go/bin", "GOPATH=${WORKSPACE}"])
-                    {
-                        sh 'sleep 300'
-                        sh 'go version'                 
-                    }
+                withEnv(["GOROOT=${root}", "PATH+GO=${root}/bin"])
+                {
+                    sh 'go version'
+                }
 
                 stage('checkout')
                 {
