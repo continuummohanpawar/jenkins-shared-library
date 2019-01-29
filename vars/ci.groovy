@@ -31,7 +31,10 @@ spec:
 
                 tool name: 'Go 1.8', type: 'go'
 
-                sh 'env'
+                withEnv(["PATH=${PATH}:${WORKSPACE}/bin:/usr/local/go/bin", "GOPATH=${WORKSPACE}"])
+                    {
+                        sh 'go version'                 
+                    }
 
                 stage('checkout')
                 {
