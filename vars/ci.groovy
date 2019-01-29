@@ -85,5 +85,12 @@ spec:
                 }
             }
         }
+
+        input 'Do you approve deployment?'
+        node(label){
+            container('maven') {
+                sh 'Execution after approval'
+            }
+        }
     }
 }
