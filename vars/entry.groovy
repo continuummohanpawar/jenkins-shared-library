@@ -30,6 +30,7 @@ spec:
             container('maven') {
                 sh 'echo Hello World'
                 sh 'ls ${WORKSPACE}'
+                sh 'sleep 300'
             }
         }        
     }
