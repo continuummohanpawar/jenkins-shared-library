@@ -86,10 +86,35 @@ spec:
             }
         }
 
-        input 'Do you approve deployment?'
+        input 'Do you approve int deployment?'
         node(label){
             container('maven') {
-                sh 'Execution after approval'
+                stage('deploy-int')
+                sh 'echo Execution after approval'
+            }
+        }
+
+        input 'Do you approve qa deployment?'
+        node(label){
+            container('maven') {
+                stage('deploy-qa')
+                sh 'echo Execution after approval'
+            }
+        }
+
+        input 'Do you approve stage deployment?'
+        node(label){
+            container('maven') {
+                stage('deploy-stage')
+                sh 'echo Execution after approval'
+            }
+        }
+
+        input 'Do you approve prod deployment?'
+        node(label){
+            container('maven') {
+                stage('deploy-prod')
+                sh 'echo Execution after approval'
             }
         }
     }
