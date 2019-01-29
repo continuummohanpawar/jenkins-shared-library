@@ -26,7 +26,7 @@ spec:
         node(label){
 
             tools{
-                go
+                go 'go'
             }
             
             container('maven') {
