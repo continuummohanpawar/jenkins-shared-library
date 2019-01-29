@@ -62,24 +62,30 @@ spec:
 
             }
 
-            container('maven') {
-                parallel
-                (
-                    a:{
+            stage('parralel')
+            {
+                parallel 
+                {
+                    container('maven') 
+                    {
                         stage('upload artifacts')
                         {
                             sh 'echo configure artifactory'
                         }
                     }
-                    
-                    b:{
+                }
+
+                parallel 
+                {
+                    container('maven') 
+                    {
                         stage('promote build')
                         {
-                            sh 'echo pormote build'
+                            sh 'echo promoting build'
                         }
                     }
-                )
-            }      
+                }
+            }
         }
     }
 }
