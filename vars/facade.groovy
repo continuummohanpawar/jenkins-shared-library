@@ -21,6 +21,7 @@ def readYamlConfig(String config)
     l.log("Reading YAML file - done", "ERROR")
     def lo = new Loggy()
     lo.log("Reading YAML file LOGGY - done", "ERROR")
+    mvn this, "I am a static method"
     entry{
         image = 'maven'
         message = 'This is Visharad'
