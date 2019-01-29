@@ -17,7 +17,7 @@ metadata:
 spec:
   containers:
   - name: maven
-    image: instrumentisto/glide
+    image: tyagivasu/ubuntu-v1:16.04
     command: ['cat']
     tty: true
 """
@@ -31,7 +31,7 @@ spec:
                 withEnv(["GOROOT=${root}", "PATH+GO=${root}/bin"])
                 {
                     sh 'env'
-                    sleep 500
+                    //sleep 500
                     sh 'go version'
                 }
 
