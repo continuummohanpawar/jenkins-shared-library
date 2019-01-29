@@ -33,6 +33,7 @@ spec:
 
                 withEnv(["PATH=${PATH}:${WORKSPACE}/bin:/usr/local/go/bin", "GOPATH=${WORKSPACE}"])
                     {
+                        sh 'sleep 300'
                         sh 'go version'                 
                     }
 
