@@ -24,6 +24,9 @@ spec:
 )   {
         body() 
         node(label){
+
+            tool name: 'Go 1.8', type: 'go'
+            
             container('maven') {
 
                 stage('checkout')
