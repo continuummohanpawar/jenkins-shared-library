@@ -26,7 +26,7 @@ spec:
 ){ 
     body() 
     node(label){
-        def data = readYaml(file: "${WORKSPACE}/pipelineConfig.yaml")
+        //def data = readYaml(file: "${WORKSPACE}/pipelineConfig.yaml")
         println(data.name)
         stage('Test Phase'){
             container('maven') {
