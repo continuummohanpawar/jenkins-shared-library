@@ -25,7 +25,10 @@ spec:
         body() 
         node(label){
 
-            def root = tool name: 'Go 1.8', type: 'go'
+            def root = tool
+            {
+                go
+            }
             
             container('maven') {
 
