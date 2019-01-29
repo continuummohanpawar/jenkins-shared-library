@@ -87,11 +87,9 @@ spec:
         }
 
         input 'Do you approve int deployment?'
-        node(label){
-            container('maven') {
-                stage('deploy-int')
-                sh 'echo Execution after approval'
-            }
+        cd
+        {
+           env = 'int'
         }
 
         input 'Do you approve qa deployment?'
