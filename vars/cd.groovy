@@ -47,7 +47,7 @@ spec:
                 }
 
                 email{
-                    to = "anonymous@continuum.net "
+                    to = "anonymous@continuum.net"
                 }
             }
         }       
