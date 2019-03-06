@@ -59,8 +59,6 @@ spec:
 
             container('maven') {
 
-                sh 'env'
-
                 stage('docker build')
                 {
                     sh 'echo building docker image'

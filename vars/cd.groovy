@@ -45,6 +45,10 @@ spec:
                         sh 'echo unable to find ${config.env}'
                     break
                 }
+
+                email{
+                    to = "anonymous@continuum.net "
+                }
             }
         }       
     }
