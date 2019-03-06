@@ -38,8 +38,6 @@ spec:
                     dir("${WORKSPACE}/src/github.com/ContinuumLLC"){
                         checkout scm
                     }
-
-                    sh 'sleep 300'
                 }
 
                 stage('build+test')
