@@ -48,7 +48,7 @@ spec:
             }
 
             email{
-                to = "abc@continuum.net",
+                to = "abc@continuum.net"
                 from = "xyz@continuum.net"
             }
         }       
