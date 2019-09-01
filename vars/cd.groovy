@@ -46,6 +46,11 @@ spec:
                     break
                 }
             }
+
+            email{
+                to = "abc@continuum.net"
+                from = "xyz@continuum.net"
+            }
         }       
     }
 }
